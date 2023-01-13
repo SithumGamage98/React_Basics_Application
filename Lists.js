@@ -108,19 +108,22 @@ class Lists extends Component {
     
     const person = [
 
-        {
+        {   
+            id : 1,
             Name : 'SIthum',
             Skill : 'Java',
             age : 23
         },
 
-        {
+        {   
+            id : 2,
             Name : 'Shashini',
             Skill : 'Angular',
             age : 25
         },
 
-        {
+        {   
+            id : 3,
             Name : 'Kaveesha',
             Skill : 'React',
             age : 23
@@ -129,9 +132,10 @@ class Lists extends Component {
 
     ]
 
-    const PersonList = person.map(persons=><Person persons ={persons} />)
+    const PersonList = person.map(persons=><Person key={person.id } persons={persons} />)
     return (
          <div>
+            
         {PersonList}
         </div>
     )
